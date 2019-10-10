@@ -80,7 +80,8 @@ stage name: 'Deploy to staging', concurrency: 1
 node {
     // write build number to index page so we can see this update
     // on windows use: bat "echo '<h1>${env.BUILD_DISPLAY_NAME}</h1>' >> app/index.html"
-    bat "echo '<h1>${env.BUILD_DISPLAY_NAME}</h1>' >> app/index.html"
+    //bat "echo '<h1>${env.BUILD_DISPLAY_NAME}</h1>' >> app/index.html"
+    bat "echo app/index.html"
     
     // deploy to a docker container mapped to port 3000
     // on windows use: bat 'docker-compose up -d --build'
