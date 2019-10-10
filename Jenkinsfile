@@ -45,11 +45,12 @@ node('mac') {
 stage 'Browser Testing'
 parallel chrome: {
     runTests("Chrome")
-}, firefox: {
-    runTests("Firefox")
-}, safari: {
-    runTests("Safari")
 }
+//, firefox: {
+//    runTests("Firefox")
+//}, safari: {
+//    runTests("Safari")
+//}
 
 def runTests(browser) {
     node {
